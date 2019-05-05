@@ -1,0 +1,16 @@
+<h4>Nuevo proyecto</h4>
+
+<section>
+    <label for="id">ID</label>
+    <input name="id" type="text" [(ngModel)]="newProject.id" />
+</section>
+<section>
+    <label for="name">Name</label>
+    <input name="name" type="text" [(ngModel)]="newProject.name" />
+</section>
+<input value="Guardar proyecto" type="submit" (click)="addProject()" />
+
+<hr/>
+
+<pre>{{ newProject | json }}</pre>
+<pre>{{ projectList | json}}</pre>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "W2": {
+    "W1": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -36,7 +36,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/W2",
+            "outputPath": "dist/W1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -45,9 +45,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "styles": ["src/styles.css", "./node_modules/mini.css/dist/mini-default.min.css"],
             "scripts": [],
             "es5BrowserSupport": true
           },
@@ -81,18 +79,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "W2:build"
+            "browserTarget": "W1:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "W2:build:production"
+              "browserTarget": "W1:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "W2:build"
+            "browserTarget": "W1:build"
           }
         },
         "test": {
@@ -126,7 +124,7 @@
         }
       }
     },
-    "W2-e2e": {
+    "W1-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -135,11 +133,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "W2:serve"
+            "devServerTarget": "W1:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "W2:serve:production"
+              "devServerTarget": "W1:serve:production"
             }
           }
         },
@@ -155,5 +153,5 @@
       }
     }
   },
-  "defaultProject": "W2"
+  "defaultProject": "W1"
 }

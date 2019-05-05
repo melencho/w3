@@ -1,0 +1,12 @@
+<section>
+  <h2>Listado de proyectos</h2>
+  <p>Tienes <mark>{{ numberOfProjects }}</mark> proyectos.</p>
+  <a routerLink="new" class="button"><span>Nuevo proyecto</span></a>
+  <ul *ngIf="proyectos.length>0; else empty">
+      <li *ngFor="let item of proyectos">
+      <span><a title="Ver proyecto {{ item.name }}" routerLink="{{ item.id }}">{{ item.name }}</a></span>
+      </li>
+    </ul>
+    <ng-template #empty> <i>Aún no hay proyectos</i> </ng-template>
+</section>
+<router-outlet></router-outlet>

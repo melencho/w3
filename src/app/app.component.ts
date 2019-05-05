@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  title = 'W2';
+  title = 'W1 - Semana 1 Dani';
 }
