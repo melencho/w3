@@ -1,4 +1,4 @@
-<section>
+<!--<section>
   <h2>Listado de proyectos</h2>
   <p>Tienes <mark>{{ numberOfProjects }}</mark> proyectos.</p>
   <a routerLink="new" class="button"><span>Nuevo proyecto</span></a>
@@ -9,4 +9,24 @@
     </ul>
     <ng-template #empty> <i>Aún no hay proyectos</i> </ng-template>
 </section>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet>-->
+
+<app-dashboard [projectsLength]="numberOfProjects"></app-dashboard>
+
+<app-filterprojectsform
+ [name]="projectName"
+ (filtrar)="projectName=$event;onFilter($event)">
+</app-filterprojectsform>
+
+<app-projectslist
+  [name]="projectName"
+  [listaProyectos]="proyectos"
+>
+</app-projectslist>
+<hr>
+<app-newprojectform
+  (nuevoProjecto)="newProject=$event;createProject($event)"
+  [nextIndex]="numberOfProjects"
+>
+
+</app-newprojectform>

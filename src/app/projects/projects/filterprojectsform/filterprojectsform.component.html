@@ -1,0 +1,8 @@
+<form>
+  <label for="name">Filtrar por nombre: </label>
+  <input name="name" value=""
+    class="primary"
+    type="text"
+    #miComponente
+    (keyup)="onChange(miComponente.value)" />
+</form>

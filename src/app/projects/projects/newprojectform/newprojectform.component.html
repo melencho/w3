@@ -1,0 +1,13 @@
+<h3>Nuevo proyecto</h3>
+<section>
+    <label for="id">Name</label>
+    <input name="id" type="text" [(ngModel)]="miNuevoProyecto.id" placeholder="Contact ID" disabled="disabled" />
+</section>
+<section>
+    <label for="name">Name</label>
+    <input name="name" type="text" [(ngModel)]="miNuevoProyecto.name" placeholder="Contact name" />
+</section>
+
+<section>
+    <input value="Nuevo Contacto" type="submit" (click)="onSend()" />
+</section>

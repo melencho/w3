@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './projects/dashboard/dashboard.component';
+import { NewprojectformComponent } from './projects/newprojectform/newprojectform.component';
+import { ViewerprojectformComponent } from './projects/viewerprojectform/viewerprojectform.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ViewerprojectsComponent } from './projects/viewerprojects/viewerprojects.component';
-import { NewprojectComponent } from './projects/newproject/newproject.component';
 
 const routes: Routes = [
   {
@@ -11,11 +12,11 @@ const routes: Routes = [
   },
   {
     path: 'new',
-    component: NewprojectComponent
+    component: NewprojectformComponent
   },
   {
     path: ':id',
-    component: ViewerprojectsComponent
+    component: ViewerprojectformComponent
   }
 ];
 
